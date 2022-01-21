@@ -14,8 +14,8 @@ public class _player : MonoBehaviour
     {
         playerScore = 0f;
 
-        playerMoveSpeed = 4f;
-        playerJumpVelocity = 1f;
+        playerMoveSpeed = 5f;
+        playerJumpVelocity = 3.5f;
     }
 
     void Update()
@@ -38,7 +38,7 @@ public class _player : MonoBehaviour
         {
             if(playerIsGrounded)
             {
-                this.GetComponent<Rigidbody2D>().AddForce(Vector2.up * playerJumpVelocity, ForceMode2D.Impulse);
+                this.GetComponent<Rigidbody2D>().AddForce(Vector2.up * playerJumpVelocity , ForceMode2D.Impulse);
             }
         }
     }
